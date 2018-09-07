@@ -105,8 +105,10 @@ h1 {
   }
 }
 .current-album {
-  display: flex;
-  padding-left: 10px;
-  height: 300px;
-  align-items: center;
+  @include col-flex;
+  padding-left: 10%;
+  padding-top: 10%;
+  img{
+    width:75%;
+  }
 }
