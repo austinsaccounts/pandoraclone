@@ -9,6 +9,12 @@
   flex-direction: row;
   justify-content: space-between;
 }
+@mixin col-flex {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 ::placeholder {
   color: white;
   opacity: 1;
@@ -36,10 +42,6 @@ opacity: 7;
     background-color: rgba(255, 255, 255, .5);
   }
 }
-.thumbnails {
-  min-width: 32rem;
-  max-width: 80rem;
-}
 
   h1{
     font-size: 18px;
@@ -47,5 +49,30 @@ opacity: 7;
     font-family: helvetica;
     font-weight: lighter;
     padding-left: 2px;
+  }
+}
+
+.mini-info-bar {
+  box-sizing: border-box;
+  background-color: green;
+  height: 75px;
+}
+.main-content {
+  @include col-flex;
+  padding-left: 50px;
+}
+.thumbnails {
+  @include col-flex;
+  background-color: pink;
+  width: 150px;
+  max-width: 80rem;
+  .thumb{
+    @include col-flex;
+    img {
+      float:left;
+    }
+    p {
+      visibility: collapse;
+    }
   }
 }
