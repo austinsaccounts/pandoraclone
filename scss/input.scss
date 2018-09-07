@@ -87,6 +87,7 @@ h1 {
   padding-left: 50px;
 }
 .thumbnails {
+  padding-top: 100px;
   @include col-flex;
   width: 100px;
   .thumb{
@@ -99,6 +100,7 @@ h1 {
   }
 }
 .image-details {
+    padding-top: 100px;
   @include col-flex;
   p {
     visibility: visible;
