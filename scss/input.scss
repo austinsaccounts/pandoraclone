@@ -42,7 +42,16 @@ body {
   margin-left: 15%;
   flex-basis: 2;
 }
-.nav-wrapper{
+.now-playing {
+  max-width: 150px;
+}
+.upgrade {
+  max-width: 300px;
+}
+.my-stations {
+  max-width: 150px;
+}
+.nav-wrapper {
   @include row-flex;
 .create-station{
   opacity: 7;
@@ -55,9 +64,11 @@ body {
     height: 35px;
     border: none;
     background-color: rgba(255, 255, 255, .5);
+    margin-right:150px;
   }
 }
-h1{
+
+h1 {
   font-size: 18px;
   color: white;
   font-family: helvetica;
@@ -68,18 +79,16 @@ h1{
 
 .mini-info-bar {
   box-sizing: border-box;
-  background-color: green;
   height: 75px;
 }
 .main-content {
-  @include col-flex;
+  @include row-flex;
+  justify-content: flex-start;
   padding-left: 50px;
 }
 .thumbnails {
   @include col-flex;
-  background-color: pink;
-  width: 150px;
-  max-width: 80rem;
+  width: 100px;
   .thumb{
     padding:10px;
     @include col-flex;
@@ -87,8 +96,17 @@ h1{
       max-width: 80px;
       float:left;
     }
+  }
+}
+.image-details {
+  @include col-flex;
   p {
-    visibility: collapse;
+    visibility: visible;
   }
-  }
+}
+.current-album {
+  display: flex;
+  padding-left: 10px;
+  height: 300px;
+  align-items: center;
 }
