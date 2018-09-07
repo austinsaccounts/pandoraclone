@@ -15,6 +15,20 @@
   flex-direction: column;
   justify-content: space-between;
 }
+@media screen and (max-width: 750px) {
+  .upgrade {
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 500px) {
+  .nav-wrapper {
+    flex-wrap: wrap;
+    input {
+      width: 300px;
+    }
+  }
+}
+
 ::placeholder {
   color: white;
   opacity: 1;
@@ -23,7 +37,7 @@ body {
   @include gradient-back;
 }
 #createStation {
-  height: 30px;
+  height: 45px;
   float: left;
   margin-left: 15%;
   flex-basis: 2;
@@ -31,24 +45,24 @@ body {
 .nav-wrapper{
   @include row-flex;
 .create-station{
-opacity: 7;
+  opacity: 7;
   input {
     color: white;
     text-align: center;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
+    height: 35px;
     border: none;
     background-color: rgba(255, 255, 255, .5);
   }
 }
-
-  h1{
-    font-size: 18px;
-    color: white;
-    font-family: helvetica;
-    font-weight: lighter;
-    padding-left: 2px;
+h1{
+  font-size: 18px;
+  color: white;
+  font-family: helvetica;
+  font-weight: lighter;
+  padding-left: 2px;
   }
 }
 
@@ -67,12 +81,14 @@ opacity: 7;
   width: 150px;
   max-width: 80rem;
   .thumb{
+    padding:10px;
     @include col-flex;
     img {
+      max-width: 80px;
       float:left;
     }
-    p {
-      visibility: collapse;
-    }
+  p {
+    visibility: collapse;
+  }
   }
 }
