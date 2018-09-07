@@ -1,7 +1,15 @@
-$bodycolor: green;
+@mixin gradient-back {
+  background-image: linear-gradient(180deg,#00a0ee,#3668ff 50%);
+  background-color: #3668ff;
+  background-repeat: no-repeat;
+}
+@mixin flex {
+  display: -webkit-flex;
+  display: flex;
+}
+
 body {
-  background-color: $bodycolor;
-  color:purple;
+  @include gradient-back;
   font-size: 50pt;
   font-family: cursive;
 }
