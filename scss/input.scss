@@ -24,6 +24,10 @@ $fc: white;
     visibility: hidden;
     display : none;
   }
+  .pandora{
+    display:none;
+    visibility: hidden;
+  }
 }
 @media screen and (max-width: 500px) {
   .nav-wrapper {
@@ -34,26 +38,27 @@ $fc: white;
   }
 }
 @media screen and (max-height: 350px) {
+  .mini-info-bar {
+    background-color: $blue;
+    height: 10px;
+  }
   .main-content {
     order: 3;
     max-height: 0;
     overflow: none;
     visibility: collapse;
   }
+}
 //media settings
-  .mini-info-bar {
-    background-color: $blue;
-    height: 100px;
-  }
-}
-::placeholder {
-  color: white;
-  opacity: 1;
-}
 body {
   @include gradient-back;
   position: relative;
   color: $fc;
+  overflow:auto;
+}
+::placeholder {
+  color: white;
+  opacity: 1;
 }
 .create-station {
   #createStation {
@@ -103,7 +108,7 @@ body {
   @include row-flex;
   justify-content: flex-start;
   padding-left: 50px;
-  max-height: 1000px;
+  max-height: 750px;
 }
 .thumbnails {
   padding-top: 100px;
@@ -134,7 +139,7 @@ body {
 }
 .player {
   box-sizing: border-box;
-  height: 50px;
+  height: 10%;
   width: 100%;
   background: inherit;
   img {
@@ -145,4 +150,5 @@ body {
   @include col-flex;
   flex-direction: column;
   justify-content: flex-start;
-}
+  height: 100%;
+  }
