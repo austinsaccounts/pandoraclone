@@ -1,22 +1,27 @@
 $blue: teal;
-$fc: pink;
+$fc: white;
+$faded: .7;
 //variables
 @mixin main-font {
   font-family: sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
+  text-align: center;
 }
+
 @mixin gradient-back {
   background-image: linear-gradient(180deg,#00a0ee,#3668ff 50%);
   background-color: #3668ff;
   background-repeat: no-repeat;
 }
+
 @mixin row-flex {
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 @mixin col-flex {
   display: -webkit-flex;
   display: flex;
@@ -24,6 +29,7 @@ $fc: pink;
   justify-content: space-around;
 }
 //mixins
+
 @media screen and (max-width: 750px) {
   .upgrade {
     visibility: hidden;
@@ -34,6 +40,7 @@ $fc: pink;
     visibility: hidden;
   }
 }
+
 @media screen and (max-width: 500px) {
   .nav-wrapper {
     flex-wrap: wrap;
@@ -42,6 +49,7 @@ $fc: pink;
     }
   }
 }
+
 @media screen and (max-height: 350px) {
   .mini-info-bar {
     background-color: $blue;
@@ -55,12 +63,14 @@ $fc: pink;
   }
 }
 //media settings
+
 body {
   @include gradient-back;
   @include main-font;
   color: $fc;
   overflow:auto;
 }
+
 .nav-wrapper {
   @include col-flex;
   display: flex;
@@ -71,61 +81,60 @@ body {
     width: 100%;
   }
 }
+
 ::placeholder {
   color: white;
   opacity: 1;
 }
 
 .now-playing {
-  max-width: 150px;
+  text-decoration: underline;
 }
 
 .my-stations {
-  max-width: 150px;
+  opacity: $faded;
 }
 
 .create-station {
-  #createStation {
-    height: 45px;
-    // margin-left: 15rem;
+  input {
+    color: white;
+    text-align: center;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    height: 35px;
+    border: none;
+    background-color: rgba(255, 255, 255, .3);
+    margin-right:150px;
     flex-basis: 2;
   }
 }
 
 .pandora {
-  h1 {
-    text-align: center;
-  }
+  opacity: $faded;
+  margin-left: 1rem;
 }
 
 .upgrade {
-  max-width: 300px;
+  height: 1.6rem;
+  margin-left: 1em;
+  margin-right: 1em;
+  span {
+    color: darkblue;
+    font-weight: bold;
+  }
+  button {
+    height: 100%;
+  }
 }
-
-
 
 .nav-wrapper {
   @include row-flex;
-  .create-station{
-    opacity: 7;
-    input {
-      color: white;
-      text-align: center;
-      -webkit-border-radius: 50px;
-      -moz-border-radius: 50px;
-      border-radius: 50px;
-      height: 35px;
-      border: none;
-      background-color: rgba(255, 255, 255, .5);
-      margin-right:150px;
-    }
-  }
   h1 {
     font-size: 18px;
     color: white;
     font-family: helvetica;
     font-weight: lighter;
-    padding-left: 2px;
   }
 }
 .mini-info-bar {
