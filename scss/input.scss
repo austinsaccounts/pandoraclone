@@ -1,6 +1,11 @@
 $blue: teal;
-$fc: white;
+$fc: pink;
 //variables
+@mixin main-font {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 @mixin gradient-back {
   background-image: linear-gradient(180deg,#00a0ee,#3668ff 50%);
   background-color: #3668ff;
@@ -16,7 +21,7 @@ $fc: white;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 //mixins
 @media screen and (max-width: 750px) {
@@ -24,7 +29,7 @@ $fc: white;
     visibility: hidden;
     display : none;
   }
-  .pandora{
+  .pandora {
     display:none;
     visibility: hidden;
   }
@@ -52,30 +57,53 @@ $fc: white;
 //media settings
 body {
   @include gradient-back;
-  position: relative;
+  @include main-font;
   color: $fc;
   overflow:auto;
+}
+.nav-wrapper {
+  @include col-flex;
+  display: flex;
+  max-width: 90vw;
+  margin-left: 5vw;
+  div {
+    max-width: 15%;
+    width: 100%;
+  }
 }
 ::placeholder {
   color: white;
   opacity: 1;
 }
-.create-station {
-  #createStation {
-    height: 45px;
-    margin-left: 15rem;
-    flex-basis: 2;
-  }
-}
+
 .now-playing {
   max-width: 150px;
 }
-.upgrade {
-  max-width: 300px;
-}
+
 .my-stations {
   max-width: 150px;
 }
+
+.create-station {
+  #createStation {
+    height: 45px;
+    // margin-left: 15rem;
+    flex-basis: 2;
+  }
+}
+
+.pandora {
+  h1 {
+    text-align: center;
+  }
+}
+
+.upgrade {
+  max-width: 300px;
+}
+
+
+
 .nav-wrapper {
   @include row-flex;
   .create-station{
