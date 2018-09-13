@@ -137,6 +137,7 @@ body {
     font-weight: lighter;
   }
 }
+
 .mini-info-bar {
   box-sizing: border-box;
   height: 15px;
@@ -145,17 +146,18 @@ body {
   @include row-flex;
   justify-content: flex-start;
   padding-left: 50px;
-  max-height: 750px;
+  max-height: 100%;
 }
-.thumbnails {
-  padding-top: 100px;
+.thumbholder {
   @include col-flex;
-  width: 100px;
+  padding-top: 15vh;
+  height: 20%;
   .thumb{
-    padding:10px;
-    @include col-flex;
+    max-height: 100px;
+    padding: 5px 0 5px 0;
     img {
-      max-width: 80px;
+      @include col-flex;
+      height: 100%;
       float:left;
     }
   }
@@ -170,8 +172,7 @@ body {
   padding-top: 10%;
   justify-content: center;
   img{
-    width:75%;
-    min-width: 80px;
+    width:100%;
   }
 }
 .player {
