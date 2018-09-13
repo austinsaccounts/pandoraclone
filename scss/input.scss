@@ -71,6 +71,13 @@ body {
   overflow:auto;
 }
 
+.wrapper {
+  @include col-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;;
+}
+
 .nav-wrapper {
   @include col-flex;
   display: flex;
@@ -190,10 +197,3 @@ body {
     height: 100%;
   }
 }
-
-.wrapper {
-  @include col-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100vh;;
-  }
